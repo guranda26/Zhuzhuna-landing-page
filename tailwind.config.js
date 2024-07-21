@@ -23,6 +23,7 @@ export default {
         color: {
           primary: "#FFF",
           secondary: "#aea6b7",
+          tertiary: "#908F8F",
           black: "#000",
 
           dark: {
@@ -54,6 +55,27 @@ export default {
             secondary: "#000",
           },
         },
+        outlineColor: {
+          primary: "#BB8DF5",
+        },
+      },
+      keyframes: {
+        pulse: {
+          "0%, 100%": {
+            transform: "scale(1)",
+            boxShadow: "0 0 0 0 #BB8DF5",
+          },
+          "50%": {
+            transform: "scale(1.1)",
+            boxShadow: "0 0 10px 5px #908F8F ",
+          },
+        },
+      },
+      animation: {
+        pulse: "pulse 2s ease-in-out",
+      },
+      borderRadius: {
+        "disproportionate-arch": "0 0 50% 50%",
       },
     },
   },
