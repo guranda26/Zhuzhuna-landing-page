@@ -24,23 +24,6 @@ const Flags = () => {
         isSelected={selectedFlag === "us"}
         onClick={() => handleFlagClick("us")}
       />
-      {/* <img
-        className={`w-6 rounded-sm ${
-          selectedFlag === "geo" ? "outline outline-outlineColor-primary" : ""
-        }`}
-        src={geoFlag}
-        alt="Georgian-flag"
-        onClick={() => handleFlagClick("geo")}
-      />
-
-      <img
-        className={`w-6 rounded-sm ${
-          selectedFlag === "us" ? "outline outline-outlineColor-primary" : ""
-        }`}
-        src={usFlag}
-        alt="US-flag"
-        onClick={() => handleFlagClick("us")}
-      /> */}
     </div>
   );
 };

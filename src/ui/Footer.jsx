@@ -8,9 +8,9 @@ const Footer = () => {
     <footer>
       <section
         id="footer"
-        className="px-[50px] pt-5 flex items-center justify-between bg-backgroundColor-dark-backgroundCol"
+        className="px-5 py-10 md:px-20 grid grid-cols-1 md:grid-cols-3 items-end bg-backgroundColor-dark-backgroundCol"
       >
-        <div className="flex space-x-10">
+        <div className="flex justify-start space-x-10 mb-5 md:mb-0 md:col-span-2">
           <div>
             <Logo />
           </div>
@@ -31,7 +31,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="pt-10">
+        <div className="flex flex-col md:items-end">
           <div className="flex justify-end space-x-4 p-4">
             <SocialMediaLink
               to="https://www.facebook.com/jujunagvino"
@@ -46,8 +46,8 @@ const Footer = () => {
               Icon={LuLinkedin}
             />
           </div>
-          <ul className="flex space-x-10 justify-end text-[12px]">
-            <li>
+          <ul className="flex md:flex-row space-x-2 md:space-x-10 justify-end text-[10px] w-full md:w-auto gap-2">
+            <li className="mb-2 md:mb-0">
               <Link to="#privacy-policy" className="text-color-tertiary">
                 პერსონალური მონაცემების დაცვის პოლიტიკა
               </Link>

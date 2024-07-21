@@ -9,7 +9,7 @@ const Button = ({ text, className = "", variant = "secondary" }) => {
   return (
     <button
       type="button"
-      className={`rounded-full ${bgColorClass} px-3 py-3 text-color-primary transition-transform transform hover:scale-105 focus:scale-105 hover:shadow-lg focus:shadow-lg hover:animate-pulse focus:animate-pulse ${className}`}
+      className={`rounded-full ${bgColorClass} text-color-primary transition-transform transform hover:scale-105 focus:scale-105 hover:shadow-lg focus:shadow-lg hover:animate-pulse focus:animate-pulse ${className}`}
     >
       {text}
     </button>

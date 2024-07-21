@@ -75,9 +75,6 @@ const Cocktails = () => {
             className="border-spacing-3"
           />
         </CocktailItem>
-        {/* <div className="bg-backgroundColor-dark-backgroundCol flex">
-          <img src="./../public/images/cocktail3.png" alt="cocktail-image" />
-        </div> */}
       </div>
     </Sections>
   );

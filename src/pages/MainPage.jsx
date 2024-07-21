@@ -4,6 +4,7 @@ import Cocktails from "./Cocktails";
 import News from "./News";
 import Wines from "./Wines";
 import { Link, Element } from "react-scroll";
+import Bar from "./Bar";
 
 const MainPage = () => {
   return (
@@ -14,6 +15,7 @@ const MainPage = () => {
         <Link to="news" smooth={true} duration={500}></Link>
         <Link to="cocktail" smooth={true} duration={500}></Link>
         <Link to="wines" smooth={true} duration={500}></Link>
+        <Link to="bar" smooth={true} duration={500}></Link>
         <Link to="contact" smooth={true} duration={500}></Link>
       </nav>
 
@@ -28,6 +30,9 @@ const MainPage = () => {
       </Element>
       <Element name="cocktails">
         <Cocktails />
+      </Element>
+      <Element name="bar">
+        <Bar />
       </Element>
     </div>
   );

@@ -1,35 +1,23 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import MenuItem from "./MenuItem";
 
 const MenuItems = ({ isMenuOpen }) => {
-  const navigate = useNavigate();
-
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <>
-      <li className={`sm:block ${isMenuOpen ? "block" : "hidden"}`}>
-        <button onClick={() => scrollToSection("about-us")}>
-          ჩვენ შესახებ
-        </button>
-      </li>
-      <li className={`sm:block ${isMenuOpen ? "block" : "hidden"}`}>
-        <button onClick={() => scrollToSection("news")}>სიახლეები</button>
-      </li>
-      <li className={`sm:block ${isMenuOpen ? "block" : "hidden"}`}>
-        <button onClick={() => scrollToSection("cocktail")}>კოქტეილები</button>
-      </li>
-      <li className={`sm:block ${isMenuOpen ? "block" : "hidden"}`}>
-        <button onClick={() => scrollToSection("wines")}>ბოთლი</button>
-      </li>
-      <li className={`sm:block ${isMenuOpen ? "block" : "hidden"}`}>
-        <button onClick={() => scrollToSection("footer")}>კონტაქტი</button>
-      </li>
+      <MenuItem
+        sectionId="about-us"
+        text="ჩვენ შესახებ"
+        isMenuOpen={isMenuOpen}
+      />
+      <MenuItem sectionId="news" text="სიახლეები" isMenuOpen={isMenuOpen} />
+      <MenuItem sectionId="wines" text="ბოთლი" isMenuOpen={isMenuOpen} />
+      <MenuItem
+        sectionId="cocktails"
+        text="კოქტეილები"
+        isMenuOpen={isMenuOpen}
+      />
+      <MenuItem sectionId="bar" text="მობილური ბარი" isMenuOpen={isMenuOpen} />
+      <MenuItem sectionId="footer" text="კონტაქტი" isMenuOpen={isMenuOpen} />
     </>
   );
 };

@@ -9,7 +9,7 @@ const SocialMediaLink = ({ to, Icon }) => {
       className="text-sm text-color-primary transition-transform duration-300 transform hover:scale-125 hover:animate-spin"
       rel="noopener noreferrer"
     >
-      <Icon />
+      <Icon className="md:size-[24px]" />
     </Link>
   );
 };

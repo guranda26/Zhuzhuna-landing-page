@@ -24,7 +24,7 @@ const Card = ({
         <div className="flex justify-end">
           <Button
             text="გაიგე მეტი"
-            className={buttonClass}
+            className={`{buttonClass} px-3 py-3`}
             variant={buttonVariant}
           ></Button>
         </div>

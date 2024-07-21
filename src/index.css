@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.input-field {
+  @apply rounded-md bg-inputColor-dark-secondary w-[200px] md:w-[300px] py-3 text-[10px] px-3;
+}
+
+.text-style {
+  @apply font-light md:text-2xl;
+}
+
+.input-spacing {
+  @apply flex flex-col space-y-2;
+}
