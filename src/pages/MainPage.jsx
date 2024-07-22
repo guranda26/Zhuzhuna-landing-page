@@ -5,6 +5,7 @@ import News from "./News";
 import Wines from "./Wines";
 import { Link, Element } from "react-scroll";
 import Bar from "./Bar";
+import ThemeToggleButton from "../components/ThemeToggleButton";
 
 const MainPage = () => {
   return (

@@ -1,14 +1,16 @@
 import Price from "../components/Price";
 import Sections from "../components/Sections";
 import WineDetails from "../components/WineDetails";
+import { useTheme } from "../context/ThemeContext";
 
 const Wines = () => {
+  const { isDarkMode } = useTheme();
   return (
     <Sections id="wines" title="ბოთლი">
       <div className="relative flex center md:justify-between h-auto border-2 border-buttonColor-primary">
         <div className="max-w-[50%] lg:w-auto px-3 py-5 md:p-0 z-20">
           <img src="../../public/images/bottle1.png" alt="bottle" />
-          <p className="md:hidden">
+          <p className={`md:hidden ${isDarkMode && "text-color-primary"}`}>
             ჟუჟუს ბოთლი 250 მლ-იანია, რადგან სწორედ ეს პორცია ინარჩუნებს
             მისართმევად საუკეთესო ტემპერატურასა და გაზს.
           </p>
@@ -27,13 +29,23 @@ const Wines = () => {
             </svg>
           </div>
           <div className="py-3 md:py-7 flex flex-col gap-10 items-center md:items-start">
-            <h3 className="font-tommaso text-4xl">ჟუჟუნა ბოთლი</h3>
+            <h3
+              className={`font-tommaso text-4xl ${
+                isDarkMode && "text-color-primary"
+              }`}
+            >
+              ჟუჟუნა ბოთლი
+            </h3>
             <div className="flex md:flex-row flex-col gap-6 justify-items-start">
               <WineDetails description="მოცულობა" info="250 მლ" />
               <WineDetails description="ალკოჰოლი" info="11 %" />
               <WineDetails description="ბუნებრივი გაზი" info="2.5 ბარი" />
             </div>
-            <p className="md:block hidden md:text-xl lg:text-2xl z-20">
+            <p
+              className={`md:block hidden md:text-xl lg:text-2xl z-20 ${
+                isDarkMode && "text-color-primary"
+              }`}
+            >
               ჟუჟუს ბოთლი 250 მლ-იანია, რადგან სწორედ ეს პორცია ინარჩუნებს
               მისართმევად საუკეთესო ტემპერატურასა და გაზს.
             </p>
