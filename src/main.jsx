@@ -6,7 +6,8 @@ import "./assets/fonts.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { BrowserRouter } from "react-router-dom";
-import { ThemeProvider } from "./context/ThemeContext.jsx";
+import AppProvider from "./context/AppContext.jsx";
+import "./i18n";
 
 const queryClient = new QueryClient();
 
@@ -15,9 +16,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={false} />
       <BrowserRouter>
-        <ThemeProvider>
+        <AppProvider>
           <App />
-        </ThemeProvider>
+        </AppProvider>
       </BrowserRouter>
     </QueryClientProvider>
   </React.StrictMode>

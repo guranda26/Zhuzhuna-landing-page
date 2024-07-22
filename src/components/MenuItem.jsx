@@ -10,7 +10,7 @@ const MenuItem = ({ sectionId, text, isMenuOpen }) => {
 
   return (
     <li
-      className={`sm:block ${
+      className={`md:block ${
         isMenuOpen ? "block" : "hidden"
       } cursor-pointer relative group`}
     >

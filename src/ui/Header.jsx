@@ -25,10 +25,10 @@ const Header = () => {
             <Logo />
           </Link>
         )}
-        <div className="flex flex-2 sm:flex-1 items-center gap-4">
-          <ul className="text-white flex flex-col sm:flex-row sm:space-y-0 sm:space-x-4 justify-center flex-1">
+        <div className="flex flex-2 md:flex-1 items-center gap-4">
+          <ul className="text-white flex flex-col md:flex-row md:space-y-0 space-x-4 md:space-x-2 justify-center flex-1">
             <li
-              className="block sm:hidden cursor-pointer font-tommaso text-xl"
+              className="block md:hidden cursor-pointer font-tommaso text-xl"
               onClick={toggleMenu}
             >
               {isMenuOpen ? <CloseBtn /> : "მენიუ"}
@@ -36,7 +36,7 @@ const Header = () => {
             <MenuItems isMenuOpen={isMenuOpen} />
           </ul>
           {!isMenuOpen && (
-            <div className="flex justify-end w-full sm:w-auto sm:ml-auto">
+            <div className="flex justify-end w-full md:w-auto md:ml-auto">
               <Flags switchLang={switchLang} />
             </div>
           )}

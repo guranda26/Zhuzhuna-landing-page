@@ -1,13 +1,17 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import usFlag from "../../public/images/flag_of_the_United_States.png";
 import geoFlag from "../../public/images/flag_of_Georgia.svg.png";
 import Flag from "./Flag";
+import { LanguageContext } from "../context/LanguageContext";
 
 const Flags = () => {
+  const { toggleLanguage } = useContext(LanguageContext);
+
   const [selectedFlag, setSelectedFlag] = useState("geo");
 
   const handleFlagClick = (flag) => {
     setSelectedFlag(flag);
+    toggleLanguage(flag === "geo" ? "ka" : "en");
   };
 
   return (

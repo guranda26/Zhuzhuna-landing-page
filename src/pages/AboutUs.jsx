@@ -1,14 +1,16 @@
 import Background from "../components/Background";
 import Heading from "../components/Heading";
+import { useTranslation } from "react-i18next";
 
 const AboutUs = () => {
+  const { t } = useTranslation();
   return (
     <section id="about-us">
       <Background
         src="public/images/marani.png"
         className="min-h-screen text-color-primary flex flex-col justify-center space-y-10 sm:space-y-20 pb-5"
       >
-        <Heading className="text-color-primary" text="ჩვენ შესახებ" />
+        <Heading className="text-color-primary" text={t(`AboutTitle`)} />
         <div className="about-text flex-col md:space-y-5 space-y-4 md:w-[65%] md:text-xl h-auto">
           <p>ჟუჟუნა ძალიან მშრალი და მომჟავო ღვინო 2017 წელს შეიქმნა.</p>
           <p>

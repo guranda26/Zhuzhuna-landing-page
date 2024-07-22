@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 const Flag = ({ src, alt, isSelected, onClick }) => {
   return (
     <img
-      className={`w-6 rounded-sm cursor-pointer ${
+      className={`min-w-6 w-6 rounded-sm cursor-pointer ${
         isSelected ? "outline outline-outlineColor-primary" : ""
       }`}
       src={src}
