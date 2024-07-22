@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import Button from "./Button";
+import { useTranslation } from "react-i18next";
 
 const Card = ({
   src,
@@ -7,9 +8,9 @@ const Card = ({
   date,
   title,
   description,
-  buttonClass,
   buttonVariant = "secondary",
 }) => {
+  const { t } = useTranslation();
   return (
     <div>
       <div>
@@ -23,7 +24,7 @@ const Card = ({
         <p>{description}</p>
         <div className="flex justify-end">
           <Button
-            text="გაიგე მეტი"
+            text={t("Buttons.Learn More")}
             className={`{buttonClass} px-3 py-3`}
             variant={buttonVariant}
           ></Button>

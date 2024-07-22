@@ -1,8 +1,10 @@
 import Background from "../components/Background";
 import Button from "../components/Button";
 import Heading from "../components/Heading";
+import { useTranslation } from "react-i18next";
 
 const Bar = () => {
+  const { t } = useTranslation();
   return (
     <section id="bar">
       <Background
@@ -12,19 +14,13 @@ const Bar = () => {
         <div className="flex flex-col md:space-y-5 space-y-4 w-auto md:w-[50%] md:text-xl h-auto md:gap-[10px] md:mb-5 lg:gap-[10px] xl:mb-20">
           <Heading
             className="text-backgroundColor-purpleEnd justify-start md:mb-5"
-            text="მობილური ბარი"
+            text={t("Bar.Title")}
           />
-          <p className="text-3xl font-tommaso">
-            გავჩნდებით ყველგან, სადაც ისურვებ
-          </p>
-          <p className="font-light sm:text-2xl">
-            ჟუჟუნას ბარი მოგაგნებს ყველგან, სადაც იქნები. თან მოიყვანს ბარმენს,
-            ქორფა ჟუჟუნას მაცივარს დააა შენი სტუმრების ჩაჟუჟუნებაზე უუამრავი
-            კოქტეილით იზრუნებს.
-          </p>
+          <p className="text-3xl font-tommaso">{t("Bar.Subtitle")}</p>
+          <p className="font-light sm:text-2xl">{t("Bar.Paragraph")}</p>
           <div className="ml-auto md:mx-auto">
             <Button
-              text="გაიგე მეტი"
+              text={t("Buttons.Learn More")}
               variant="primary"
               className="px-12 py-3 md:mt-10"
             />
@@ -39,43 +35,39 @@ const Bar = () => {
         <div>
           <form className="ml-auto md:mx-auto flex flex-col gap-5">
             <div className="input-spacing">
-              <label
-                htmlFor="phone"
-                placeholder="მიუთითეთ ნომერი..."
-                className=""
-              >
-                ტელეფონი
+              <label htmlFor="phone" className="">
+                {t("Contact.Tel")}
               </label>
               <input
                 type="number"
                 id="phone"
                 name="phone"
-                placeholder="მიუთითეთ ნომერი..."
+                placeholder={t("Contact.telPlaceholder")}
                 className="input-field"
               />
             </div>
             <div className="input-spacing">
-              <label htmlFor="email">ელ. ფოსტა</label>
+              <label htmlFor="email">{t("Contact.Email")}</label>
               <input
                 type="email"
                 id="email"
                 name="email"
-                placeholder="მიუთითეთ ელ-ფოსტა..."
+                placeholder={t("Contact.emailPlaceholder")}
                 className="input-field"
               />
             </div>
             <div className="input-spacing">
-              <label htmlFor="message">მესიჯი</label>
+              <label htmlFor="message">{t("Contact.Message")}</label>
               <textarea
                 name="message"
                 id="message"
-                placeholder="დაწერეთ მესიჯი..."
+                placeholder={t("Contact.messagePlaceholder")}
                 className="input-field h-[100px] md:h-[120px]"
               ></textarea>
             </div>
             <div className="ml-auto">
               <Button
-                text="გაგზავნა"
+                text={t("Buttons.Send")}
                 variant="primary"
                 className="py-2 md:py-3 px-10 md:mt-10"
               />
@@ -83,16 +75,8 @@ const Bar = () => {
           </form>
         </div>
         <div className="flex flex-col h-auto md:mb-5 gap-5 lg:gap-[10px] xl:mb-20 max-w-[50vw] sm:max-w-[45vw]">
-          <p className="text-style">
-            ქორფა ჟუჟუნა უუუამრავ კაფე-ბარში შეგხვდება და შენთვის საყვარელ
-            კოქტეილებს ააცქრიალებს. ცივი და ჩქრიალა ჟუჟუ კოქტეილში პირდაპირ
-            ონკანიდან ეშვება.
-          </p>
-          <p className="text-style">
-            ჩამოსასხმელი ჟუჟუნა კაფე-ბარებს მრავალჯერადი გამოყენების კეგებში
-            მიეწოდება და დამატებით შეფუთვას არ საჭიროებს, რის გამოც გარემოსთან
-            განსაკუთრებით მეგობრობს და არც მის დაბინძურებას იწვევს.
-          </p>
+          <p className="text-style">{t("Contact.Paragraph1")}</p>
+          <p className="text-style">{t("Contact.Paragraph2")}</p>
         </div>
       </Background>
     </section>

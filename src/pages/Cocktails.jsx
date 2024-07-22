@@ -1,53 +1,56 @@
 import CocktailInfo from "../components/CocktailInfo";
 import CocktailItem from "../components/CocktailItem";
 import Sections from "../components/Sections";
+import { useTranslation } from "react-i18next";
 
-const cocktailInfoData = [
-  {
-    title: "აპეროლ შპრიტსი",
-    tableData: {
-      headers: ["აპეროლი", "ფორთოხალი"],
-      rows: [
-        ["50 მლ", "1 ნაჭერი"],
-        ["ყინული", "ტონიკი"],
-        ["სავსე ჭიქა", "20 მგ"],
-        ["ჟუჟუნა"],
-        ["150მლ"],
-      ],
-    },
-  },
-  {
-    title: "კენკრიანი ჟუჟუნა",
-    tableData: {
-      headers: ["ყინული"],
-      rows: [
-        ["ნახევარი ჭიქა"],
-        ["კენკრა"],
-        ["70გრ"],
-        ["ჟუჟუნა"],
-        ["150მლ"],
-        ["გრენადინის სიროფი"],
-        ["10 მლ"],
-      ],
-    },
-  },
-  {
-    title: "მიმოზა",
-    tableData: {
-      headers: ["ყინული"],
-      rows: [
-        ["ნახევარი ჭიქა"],
-        ["ფორთოხლის ფრეში"],
-        ["50 მლ"],
-        ["ჟუჟუნა"],
-        ["130 მლ"],
-      ],
-    },
-  },
-];
 const Cocktails = () => {
+  const { t } = useTranslation();
+
+  const cocktailInfoData = [
+    {
+      title: t("Cocktails.AperolSpritz"),
+      tableData: {
+        headers: [t("CocktailInfo.Aperol"), t("CocktailInfo.Orange")],
+        rows: [
+          [t("CocktailInfo.AperolVol.0"), t("CocktailInfo.Slice")],
+          [t("CocktailInfo.Ice"), t("CocktailInfo.Tonic")],
+          [t("CocktailInfo.FullGlass"), t("CocktailInfo.AperolVol.1")],
+          [t("CocktailInfo.Zhuzhuna")],
+          [t("CocktailInfo.AperolVol.2")],
+        ],
+      },
+    },
+    {
+      title: t("Cocktails.BerryZhuzhuna"),
+      tableData: {
+        headers: [t("CocktailInfo.Ice")],
+        rows: [
+          [t("CocktailInfo.HalfGlass")],
+          [t("CocktailInfo.Berries")],
+          [t("CocktailInfo.ZhuzhuVol.0")],
+          [t("CocktailInfo.Zhuzhuna")],
+          [t("CocktailInfo.ZhuzhuVol.1")],
+          [t("CocktailInfo.GrenadineSyrup")],
+          [t("CocktailInfo.ZhuzhuVol.2")],
+        ],
+      },
+    },
+    {
+      title: t("Cocktails.Mimosa"),
+      tableData: {
+        headers: [t("CocktailInfo.Ice")],
+        rows: [
+          [t("CocktailInfo.HalfGlass")],
+          [t("CocktailInfo.OrangeJuice")],
+          [t("CocktailInfo.MimosaVol.0")],
+          [t("CocktailInfo.Zhuzhuna")],
+          [t("CocktailInfo.MimosaVol.1")],
+        ],
+      },
+    },
+  ];
   return (
-    <Sections id="cocktails" title="კოქტეილი">
+    <Sections id="cocktails" title={t("Cocktails.Title")}>
       <div className="relative bg-backgroundColor-dark-backgroundCol flex md:gap-[180px] items-center max-w-[100%]">
         <img
           className="sm:bg-cover bg-top md:min-h-0 min-h-screen"

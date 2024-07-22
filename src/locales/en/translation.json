@@ -1,8 +1,89 @@
 {
-  "HomeTitle": "Jujuna",
-  "AboutTitle": "About Us",
-  "Bottle": "Bottle",
-  "Volume": "Volume",
-  "Alcohol": "Alcohol",
-  "Natural Gas": "Natural Gas"
+  "Home": {
+    "Title": "Zhuzhuna",
+    "Paragraph": "The wine is neither still nor fully sparkling."
+  },
+  "About": {
+    "Title": "About Us",
+    "Paragraph1": "Zhuzhuna is a very dry and sour wine which was created in 2017.",
+    "Paragraph2": "After years of passion and dedication to wine, six friends founded the company using our own funds. Our primary goal was to revolutionize the drinking experience and introduce a new era of contemporary wine into modern culture.",
+    "Paragraph3": "Zhuzhuna quickly became a favorite among cafes and bars in Georgia, and in 2020, we expanded to include a chain of stores. This rapid growth is a significant milestone for us.",
+    "Paragraph4": "The story of Zhuzhuna extends beyond Georgia, bringing the Tbilisi drinking culture to China and Japan through our exports."
+  },
+  "News": {
+    "Title": "News",
+    "Paragraph": "Stay updated with the latest happenings, events, and promotions at Zhuzhuna."
+  },
+  "Cards": {
+    "Title": ["Tasting", "Vintage", "Wine Night"],
+    "Description": [
+      "Taste our wine at the annual tasting and feel the real taste",
+      "Visit our harvest and learn more about the Zhuzhuna production process and its origins.",
+      "Enjoy our wine, jazz music, and a comfortable evening. Spend an unforgettable night with us."
+    ],
+    "Dates": ["August 17, 2024", "September 25, 2024", "October 2, 2024"]
+  },
+  "Bar": {
+    "Title": "Mobile bar",
+    "Subtitle": "We will appear wherever you want",
+    "Paragraph": "Zhuzhuna Bar will reach you wherever you are. We’ll provide a bartender, a supply of Korfa Zhuzhuna, and ensure your guests are delighted with a variety of cocktails."
+  },
+  "Bottle": {
+    "Title": "Bottle",
+    "Subtitle": "Zhuzhuna Bottle",
+    "Paragraph": "The Zhuzhu bottle holds 250 ml because this portion maintains the optimal temperature and carbonation for consumption"
+  },
+  "Cocktail": {
+    "Title": "Cocktails",
+    "Paragraph": "Indulge in our signature cocktails, each meticulously crafted to delight your senses."
+  },
+  "Cocktails": {
+    "Title": "Cocktails",
+    "AperolSpritz": "Aperol Spritz",
+    "BerryZhuzhuna": "Berry Zhuzhuna",
+    "Mimosa": "Mimosa"
+  },
+  "CocktailInfo": {
+    "Aperol": "Aperol",
+    "Orange": "Orange",
+    "Ice": "Ice",
+    "Zhuzhuna": "Zhuzhuna",
+    "Tonic": "Tonic",
+    "FullGlass": "Full Glass",
+    "HalfGlass": "Half Glass",
+    "GrenadineSyrup": "Grenadine Syrup",
+    "Slice": "1 slice",
+    "AperolVol": ["50 ml", "20 mg", "150 ml"],
+    "ZhuzhuVol": ["70 gr", "150 ml", "10 ml"],
+    "MimosaVol": ["50 ml", "130 ml"],
+    "Berries": "Berries",
+    "OrangeJuice": "Orange juice"
+  },
+  "Contact": {
+    "Title": "Contact",
+    "Paragraph1": "Korfa Zhuzhuna is found in numerous cafes and bars, where it crafts your favorite cocktails. Enjoy our cold, sparkling Zhuzhuna cocktail straight from the tap.",
+    "Paragraph2": "Zhuzhuna is supplied to cafes and bars in reusable kegs, eliminating the need for additional packaging. This eco-friendly approach is particularly gentle on the environment and helps reduce pollution.",
+    "Tel": "Phone",
+    "Email": "Email",
+    "Message": "Message",
+    "Address": "Address",
+    "AddressVal": "Ninoshvili #8, Tbilisi, Georgia",
+    "telPlaceholder": "Enter your number",
+    "emailPlaceholder": "Enter your email",
+    "messagePlaceholder": "Write your message...",
+    "PersonalData": "Personal data protection policy",
+    "Security": "Security Center"
+  },
+
+  "Buttons": {
+    "Learn More": "Learn More",
+    "Send": "Send"
+  },
+  "Winedetails": {
+    "Volume": "Volume",
+    "Alcohol": "Alcohol",
+    "Natural Gas": "Natural Gas",
+    "vol": "250 ml",
+    "bar": "2.5 bar"
+  }
 }

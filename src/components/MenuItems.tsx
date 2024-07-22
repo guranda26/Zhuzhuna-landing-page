@@ -1,23 +1,37 @@
 import React from "react";
 import MenuItem from "./MenuItem";
+import { useTranslation } from "react-i18next";
 
 const MenuItems = ({ isMenuOpen }) => {
+  const { t } = useTranslation();
   return (
     <>
       <MenuItem
         sectionId="about-us"
-        text="ჩვენ შესახებ"
+        text={t("About.Title")}
         isMenuOpen={isMenuOpen}
       />
-      <MenuItem sectionId="news" text="სიახლეები" isMenuOpen={isMenuOpen} />
-      <MenuItem sectionId="wines" text="ბოთლი" isMenuOpen={isMenuOpen} />
+      <MenuItem
+        sectionId="news"
+        text={t("News.Title")}
+        isMenuOpen={isMenuOpen}
+      />
+      <MenuItem
+        sectionId="wines"
+        text={t("Bottle.Title")}
+        isMenuOpen={isMenuOpen}
+      />
       <MenuItem
         sectionId="cocktails"
-        text="კოქტეილები"
+        text={t("Cocktail.Title")}
         isMenuOpen={isMenuOpen}
       />
-      <MenuItem sectionId="bar" text="მობილური ბარი" isMenuOpen={isMenuOpen} />
-      <MenuItem sectionId="footer" text="კონტაქტი" isMenuOpen={isMenuOpen} />
+      <MenuItem sectionId="bar" text={t("Bar.Title")} isMenuOpen={isMenuOpen} />
+      <MenuItem
+        sectionId="footer"
+        text={t("Contact.Title")}
+        isMenuOpen={isMenuOpen}
+      />
     </>
   );
 };

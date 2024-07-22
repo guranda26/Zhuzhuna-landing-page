@@ -1,18 +1,20 @@
 import Price from "../components/Price";
 import Sections from "../components/Sections";
-import WineDetails from "../components/WineDetails";
 import { useTheme } from "../context/ThemeContext";
+import { useTranslation } from "react-i18next";
+import WineDetails from "../components/WineDetails"; // Ensure this import is correct
 
 const Wines = () => {
+  const { t } = useTranslation();
   const { isDarkMode } = useTheme();
+
   return (
-    <Sections id="wines" title="ბოთლი">
+    <Sections id="wines" title={t("Bottle.Title")}>
       <div className="relative flex center md:justify-between h-auto border-2 border-buttonColor-primary">
         <div className="max-w-[50%] lg:w-auto px-3 py-5 md:p-0 z-20">
           <img src="../../public/images/bottle1.png" alt="bottle" />
           <p className={`md:hidden ${isDarkMode && "text-color-primary"}`}>
-            ჟუჟუს ბოთლი 250 მლ-იანია, რადგან სწორედ ეს პორცია ინარჩუნებს
-            მისართმევად საუკეთესო ტემპერატურასა და გაზს.
+            {t("Bottle.Paragraph")}
           </p>
         </div>
         <article className="md:w-[65%] sm:w-[60%] flex flex-col px-2 lg:px-5">
@@ -34,20 +36,25 @@ const Wines = () => {
                 isDarkMode && "text-color-primary"
               }`}
             >
-              ჟუჟუნა ბოთლი
+              {t("Bottle.Subtitle")}
             </h3>
             <div className="flex md:flex-row flex-col gap-6 justify-items-start">
-              <WineDetails description="მოცულობა" info="250 მლ" />
-              <WineDetails description="ალკოჰოლი" info="11 %" />
-              <WineDetails description="ბუნებრივი გაზი" info="2.5 ბარი" />
+              <WineDetails
+                description={t("Winedetails.Volume")}
+                info={t("Winedetails.vol")}
+              />
+              <WineDetails description={t("Winedetails.Alcohol")} info="11 %" />
+              <WineDetails
+                description={t("Winedetails.Natural Gas")}
+                info={t("Winedetails.bar")}
+              />
             </div>
             <p
               className={`md:block hidden md:text-xl lg:text-2xl z-20 ${
                 isDarkMode && "text-color-primary"
               }`}
             >
-              ჟუჟუს ბოთლი 250 მლ-იანია, რადგან სწორედ ეს პორცია ინარჩუნებს
-              მისართმევად საუკეთესო ტემპერატურასა და გაზს.
+              {t("Bottle.Paragraph")}
             </p>
           </div>
           <div className="md:absolute right-20 md:right-10 md:bottom-[-50] lg:bottom-5 px-5 ml-auto z-20">

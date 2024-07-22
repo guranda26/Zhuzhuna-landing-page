@@ -19,10 +19,7 @@ const CocktailInfo = ({ title, tableData, className = "" }) => {
           </thead>
           <tbody>
             {tableData.rows.map((row, rowIndex) => (
-              <tr
-                key={rowIndex}
-                className="md:flex md:justify-between md:w-full"
-              >
+              <tr key={rowIndex} className="md:justify-between md:w-full">
                 {row.map((cell, cellIndex) => (
                   <td
                     key={cellIndex}
@@ -33,7 +30,7 @@ const CocktailInfo = ({ title, tableData, className = "" }) => {
                         : rowIndex === tableData.rows.length - 1
                         ? "text-color-secondary"
                         : ""
-                    } ${cellIndex === 0 ? "min-w-[103px]" : ""}`}
+                    } ${cellIndex === 0 ? "min-w-[103px]" : "min-w-[100px]"}`}
                   >
                     {cell}
                   </td>
