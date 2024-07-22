@@ -19,11 +19,15 @@ const Footer = () => {
               <li className="cursor-pointer transition-transform transform hover:animate-bounce">
                 ტელეფონი
               </li>
-              <li className="link mb-2">+995579760006</li>
+              <li className="link mb-2">
+                <a href="tel:+995579760006">+995579760006</a>
+              </li>
               <li className="cursor-pointer transition-transform transform hover:animate-bounce">
                 ელ ფოსტა
               </li>
-              <li className="link mb-2">Hello@jujuna.ge</li>
+              <li className="link mb-2">
+                <a href="mailto:someone@example.com">Hello@jujuna.ge</a>
+              </li>
               <li className="cursor-pointer transition-transform transform hover:animate-bounce">
                 მისამართი
               </li>
