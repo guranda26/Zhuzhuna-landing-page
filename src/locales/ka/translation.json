@@ -16,7 +16,7 @@
   },
 
   "Cards": {
-    "Title": ["Tasting", "Vintage", "Wine Night"],
+    "Title": ["დეგუსტაცია", "რთველი", "ღვინის საღამო"],
     "Description": [
       "დააგემოვნეთ ჩვენი ღვინო ყოველწლიურად გამართულ დეგუსტაციაზე და იგრძენით ნამდვილი გემო",
       "ეწვიეთ ჩვენს რთველს და შეიტყვეთ მეტი ჟუჟუნას წარმოების პროცესზე და მის წარმომავლობაზე",
@@ -34,15 +34,12 @@
     "Subtitle": "ჟუჟუნა ბოთლი",
     "Paragraph": "ჟუჟუს ბოთლი 250 მლ-იანია, რადგან სწორედ ეს პორცია ინარჩუნებს მისართმევად საუკეთესო ტემპერატურასა და გაზს."
   },
-  "Cocktail": {
-    "Title": "კოქტეილები",
-    "Paragraph": "Indulge in our signature cocktails, each meticulously crafted to delight your senses."
-  },
+
   "Cocktails": {
     "Title": "კოქტეილები",
-    "AperolSpritz": "Aperol Spritz",
-    "BerryZhuzhuna": "Berry Zhuzhuna",
-    "Mimosa": "Mimosa"
+    "AperolSpritz": "აპეროლ შპრიტსი",
+    "BerryZhuzhuna": "კენკრიანი ჟუჟუნა",
+    "Mimosa": "მიმოზა"
   },
   "CocktailInfo": {
     "Aperol": "აპეროლი",
