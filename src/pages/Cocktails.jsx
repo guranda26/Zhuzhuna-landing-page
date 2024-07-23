@@ -54,7 +54,7 @@ const Cocktails = () => {
       <div className="relative bg-backgroundColor-dark-backgroundCol flex md:gap-[180px] items-center max-w-[100%]">
         <img
           className="sm:bg-cover bg-top md:min-h-0 min-h-screen"
-          src="../../public/images/cocktail1.png"
+          src="../../images/cocktail1.png"
           alt="cocktail-image"
         />
         <CocktailInfo
@@ -64,14 +64,14 @@ const Cocktails = () => {
         />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-5 md:mt-5">
-        <CocktailItem src="../../public/images/cocktail2.png">
+        <CocktailItem src="../../images/cocktail2.png">
           <CocktailInfo
             title={cocktailInfoData[1].title}
             tableData={cocktailInfoData[1].tableData}
             className="border-spacing-3"
           />
         </CocktailItem>
-        <CocktailItem src="../../public/images/cocktail3.png">
+        <CocktailItem src="../../images/cocktail3.png">
           <CocktailInfo
             title={cocktailInfoData[2].title}
             tableData={cocktailInfoData[2].tableData}

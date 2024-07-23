@@ -28,7 +28,7 @@ const Footer = () => {
                 {t("Contact.Email")}
               </li>
               <li className="link mb-2">
-                <a href="mailto:someone@example.com">Hello@jujuna.ge</a>
+                <a href="mailto:guralemo@gmail.com">Hello@jujuna.ge</a>
               </li>
               <li className="cursor-pointer transition-transform transform hover:animate-bounce">
                 {t("Contact.Address")}

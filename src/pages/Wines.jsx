@@ -2,7 +2,7 @@ import Price from "../components/Price";
 import Sections from "../components/Sections";
 import { useTheme } from "../context/ThemeContext";
 import { useTranslation } from "react-i18next";
-import WineDetails from "../components/WineDetails"; // Ensure this import is correct
+import WineDetails from "../components/WineDetails";
 
 const Wines = () => {
   const { t } = useTranslation();
@@ -12,7 +12,7 @@ const Wines = () => {
     <Sections id="wines" title={t("Bottle.Title")}>
       <div className="relative flex center md:justify-between h-auto border-2 border-buttonColor-primary">
         <div className="max-w-[50%] lg:w-auto px-3 py-5 md:p-0 z-20">
-          <img src="../../public/images/bottle1.png" alt="bottle" />
+          <img src="../../images/bottle1.png" alt="bottle" />
           <p className={`md:hidden ${isDarkMode && "text-color-primary"}`}>
             {t("Bottle.Paragraph")}
           </p>

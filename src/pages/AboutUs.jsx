@@ -8,7 +8,7 @@ const AboutUs = ({ keys }) => {
   return (
     <section id="about-us">
       <Background
-        src="public/images/marani.png"
+        src="images/marani.png"
         className="min-h-screen text-color-primary flex flex-col justify-center space-y-10 sm:space-y-20 pb-5"
       >
         <Heading className="text-color-primary" text={t(`About.Title`)} />
@@ -21,16 +21,7 @@ const AboutUs = ({ keys }) => {
               "About.Paragraph4",
             ]}
           />
-
-          {/* <p>{t(`About.Paragraph1`)}</p>
-          <p>{t(`About.Paragraph2`)}</p>
-          <p>{t(`About.Paragraph3`)}</p>
-          <p>
-            ჟუჟუს ისტორია საქართველოს ფარგლებსაც სცდება და ჩინეთსა და იაპონიაში
-            ექსპორტით გააქვს თბილისური დალევის კულტურა.
-          </p> */}
         </div>
-        {/* </div> */}
       </Background>
     </section>
   );

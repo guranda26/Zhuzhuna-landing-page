@@ -1,14 +1,65 @@
+import { useEffect, useState } from "react";
 import Background from "../components/Background";
 import Button from "../components/Button";
 import Heading from "../components/Heading";
+import emailjs from "emailjs-com";
 import { useTranslation } from "react-i18next";
 
 const Bar = () => {
   const { t } = useTranslation();
+
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const templateParams = {
+      phone,
+      email,
+      message,
+    };
+
+    console.log("Sending email with the following data:", templateParams);
+
+    emailjs
+      .send(
+        "service_8hutyql",
+        "template_ar46vjr",
+        templateParams,
+        "UZ16V7aOepQVpGrq9"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setSuccess(true);
+          setPhone("");
+          setEmail("");
+          setMessage("");
+        },
+        (err) => {
+          console.error("FAILED...", err);
+          setError("Failed to send message. Please try again.");
+        }
+      );
+  };
+  useEffect(() => {
+    if (success || error) {
+      const timer = setTimeout(() => {
+        setSuccess(false);
+        setError(null);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [success, error]);
+
   return (
     <section id="bar">
       <Background
-        src="public/images/banner2.png"
+        src="/images/banner2.png"
         className="min-h-screen text-color-primary flex flex-col justify-center items-end md:items-center space-y-10 sm:space-y-20 pb-5"
       >
         <div className="flex flex-col md:space-y-5 space-y-4 w-auto md:w-[50%] md:text-xl h-auto md:gap-[10px] md:mb-5 lg:gap-[10px] xl:mb-20">
@@ -29,21 +80,24 @@ const Bar = () => {
       </Background>
 
       <Background
-        src="public/images/banner1.png"
+        src="/images/banner1.png"
         className="min-h-screen text-color-primary flex gap-5 pb-5 max-sm:px-[15px] justify-evenly lg:items-center items-start pt-[40px]"
       >
         <div>
-          <form className="ml-auto md:mx-auto flex flex-col gap-5">
+          <form
+            onSubmit={handleSubmit}
+            className="ml-auto md:mx-auto flex flex-col gap-5"
+          >
             <div className="input-spacing">
-              <label htmlFor="phone" className="">
-                {t("Contact.Tel")}
-              </label>
+              <label htmlFor="phone">{t("Contact.Tel")}</label>
               <input
                 type="number"
                 id="phone"
                 name="phone"
+                value={phone}
                 placeholder={t("Contact.telPlaceholder")}
                 className="input-field"
+                onChange={(e) => setPhone(e.target.value)}
               />
             </div>
             <div className="input-spacing">
@@ -54,6 +108,8 @@ const Bar = () => {
                 name="email"
                 placeholder={t("Contact.emailPlaceholder")}
                 className="input-field"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="input-spacing">
@@ -63,15 +119,24 @@ const Bar = () => {
                 id="message"
                 placeholder={t("Contact.messagePlaceholder")}
                 className="input-field h-[100px] md:h-[120px]"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
               ></textarea>
             </div>
             <div className="ml-auto">
               <Button
+                type="submit"
                 text={t("Buttons.Send")}
                 variant="primary"
                 className="py-2 md:py-3 px-10 md:mt-10"
               />
             </div>
+            {success && (
+              <p className="text-green-600 text-center">
+                Message sent successfully!
+              </p>
+            )}
+            {error && <p className="text-red-500 text-center">{error}</p>}
           </form>
         </div>
         <div className="flex flex-col h-auto md:mb-5 gap-5 lg:gap-[10px] xl:mb-20 max-w-[50vw] sm:max-w-[45vw]">
