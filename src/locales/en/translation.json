@@ -33,7 +33,10 @@
     "Subtitle": "Zhuzhuna Bottle",
     "Paragraph": "The Zhuzhu bottle holds 250 ml because this portion maintains the optimal temperature and carbonation for consumption"
   },
-
+  "Cocktail": {
+    "Title": "Cocktails",
+    "Paragraph": "Indulge in our signature cocktails, each meticulously crafted to delight your senses."
+  },
   "Cocktails": {
     "Title": "Cocktails",
     "AperolSpritz": "Aperol Spritz",

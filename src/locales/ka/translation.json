@@ -34,7 +34,10 @@
     "Subtitle": "ჟუჟუნა ბოთლი",
     "Paragraph": "ჟუჟუს ბოთლი 250 მლ-იანია, რადგან სწორედ ეს პორცია ინარჩუნებს მისართმევად საუკეთესო ტემპერატურასა და გაზს."
   },
-
+  "Cocktail": {
+    "Title": "კოქტეილები",
+    "Paragraph": "Indulge in our signature cocktails, each meticulously crafted to delight your senses."
+  },
   "Cocktails": {
     "Title": "კოქტეილები",
     "AperolSpritz": "აპეროლ შპრიტსი",
