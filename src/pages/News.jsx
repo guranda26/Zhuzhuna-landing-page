@@ -1,6 +1,6 @@
-import PourWine from "../../public/images/pour.png";
-import Grape from "../../public/images/grape.png";
-import GlassWine from "../../public/images/glasswine.png";
+import PourWine from "/images/pour.png";
+import Grape from "/images/grape.png";
+import GlassWine from "/images/glasswine.png";
 
 import Card from "../components/Card";
 import Sections from "../components/Sections";

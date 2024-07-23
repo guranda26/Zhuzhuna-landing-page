@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import usFlag from "../../public/images/flag_of_the_United_States.png";
-import geoFlag from "../../public/images/flag_of_Georgia.svg.png";
+import usFlag from "/images/flag_of_the_United_States.png";
+import geoFlag from "/images/flag_of_Georgia.svg.png";
 import Flag from "./Flag";
 import { LanguageContext } from "../context/LanguageContext";
 

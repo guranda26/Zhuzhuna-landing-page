@@ -4,10 +4,11 @@ import Logo from "./Logo";
 import Flags from "../components/Flags";
 import { Link } from "react-router-dom";
 import CloseBtn from "../components/CloseBtn";
-
+import { useTranslation } from "react-i18next";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [language, setLanguage] = useState("geo");
+  const { t } = useTranslation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -31,7 +32,7 @@ const Header = () => {
               className="block md:hidden cursor-pointer font-tommaso text-xl"
               onClick={toggleMenu}
             >
-              {isMenuOpen ? <CloseBtn /> : "მენიუ"}
+              {isMenuOpen ? <CloseBtn /> : `${t("Menu")}`}
             </li>
             <MenuItems isMenuOpen={isMenuOpen} />
           </ul>
