@@ -12,6 +12,7 @@ const Bar = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
   const { t } = useTranslation();
 
@@ -20,6 +21,35 @@ const Bar = () => {
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(null);
+
+  const onSubmit = (data) => {
+    const templateParams = {
+      phone: data.phone,
+      email: data.email,
+      message: data.message,
+    };
+
+    console.log("Sending email with the following data:", templateParams);
+
+    emailjs
+      .send(
+        "service_8hutyql",
+        "template_ar46vjr",
+        templateParams,
+        "UZ16V7aOepQVpGrq9"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setSuccess(true);
+          reset();
+        },
+        (err) => {
+          console.error("FAILED...", err);
+          setError("Failed to send message. Please try again.");
+        }
+      );
+  };
 
   // handleSubmit = (data) => {
   //   console.log(data);
@@ -96,7 +126,7 @@ const Bar = () => {
       >
         <div>
           <form
-            onSubmit={handleSubmit}
+            onSubmit={handleSubmit(onSubmit)}
             className="ml-auto md:mx-auto flex flex-col gap-5"
           >
             <div className="input-spacing">
@@ -116,6 +146,9 @@ const Bar = () => {
                 placeholder={t("Contact.telPlaceholder")}
                 required
               />
+              {errors.phone && (
+                <p className="text-red-500">Phone is required</p>
+              )}
             </div>
             <div className="input-spacing">
               <label htmlFor="email">{t("Contact.Email")}</label>
@@ -134,6 +167,9 @@ const Bar = () => {
                 required
                 placeholder={t("Contact.emailPlaceholder")}
               />
+              {errors.email && (
+                <p className="text-red-500">Email is required</p>
+              )}
             </div>
             <div className="input-spacing">
               <label htmlFor="message">{t("Contact.Message")}</label>
@@ -151,6 +187,9 @@ const Bar = () => {
                 className="input-field h-[100px] md:h-[120px]"
                 required
               ></textarea>
+              {errors.message && (
+                <p className="text-red-500">Message is required</p>
+              )}
             </div>
             <div className="ml-auto">
               <Button
