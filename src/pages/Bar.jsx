@@ -4,8 +4,15 @@ import Button from "../components/Button";
 import Heading from "../components/Heading";
 import emailjs from "emailjs-com";
 import { useTranslation } from "react-i18next";
+import { useForm } from "react-hook-form";
+import { data } from "autoprefixer";
 
 const Bar = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const { t } = useTranslation();
 
   const [phone, setPhone] = useState("");
@@ -14,38 +21,42 @@ const Bar = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(null);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  // handleSubmit = (data) => {
+  //   console.log(data);
+  // };
 
-    const templateParams = {
-      phone,
-      email,
-      message,
-    };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
 
-    console.log("Sending email with the following data:", templateParams);
+  //   const templateParams = {
+  //     phone,
+  //     email,
+  //     message,
+  //   };
 
-    emailjs
-      .send(
-        "service_8hutyql",
-        "template_ar46vjr",
-        templateParams,
-        "UZ16V7aOepQVpGrq9"
-      )
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          setSuccess(true);
-          setPhone("");
-          setEmail("");
-          setMessage("");
-        },
-        (err) => {
-          console.error("FAILED...", err);
-          setError("Failed to send message. Please try again.");
-        }
-      );
-  };
+  //   console.log("Sending email with the following data:", templateParams);
+
+  //   emailjs
+  //     .send(
+  //       "service_8hutyql",
+  //       "template_ar46vjr",
+  //       templateParams,
+  //       "UZ16V7aOepQVpGrq9"
+  //     )
+  //     .then(
+  //       (response) => {
+  //         console.log("SUCCESS!", response.status, response.text);
+  //         setSuccess(true);
+  //         setPhone("");
+  //         setEmail("");
+  //         setMessage("");
+  //       },
+  //       (err) => {
+  //         console.error("FAILED...", err);
+  //         setError("Failed to send message. Please try again.");
+  //       }
+  //     );
+  // };
   useEffect(() => {
     if (success || error) {
       const timer = setTimeout(() => {
@@ -90,7 +101,7 @@ const Bar = () => {
           >
             <div className="input-spacing">
               <label htmlFor="phone">{t("Contact.Tel")}</label>
-              <input
+              {/* <input
                 type="number"
                 id="phone"
                 name="phone"
@@ -98,11 +109,17 @@ const Bar = () => {
                 placeholder={t("Contact.telPlaceholder")}
                 className="input-field"
                 onChange={(e) => setPhone(e.target.value)}
+              /> */}
+              <input
+                {...register("phone")}
+                className="input-field"
+                placeholder={t("Contact.telPlaceholder")}
+                required
               />
             </div>
             <div className="input-spacing">
               <label htmlFor="email">{t("Contact.Email")}</label>
-              <input
+              {/* <input
                 type="email"
                 id="email"
                 name="email"
@@ -110,17 +127,29 @@ const Bar = () => {
                 className="input-field"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+              /> */}
+              <input
+                {...register("email")}
+                className="input-field"
+                required
+                placeholder={t("Contact.emailPlaceholder")}
               />
             </div>
             <div className="input-spacing">
               <label htmlFor="message">{t("Contact.Message")}</label>
-              <textarea
+              {/* <textarea
                 name="message"
                 id="message"
                 placeholder={t("Contact.messagePlaceholder")}
                 className="input-field h-[100px] md:h-[120px]"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
+              ></textarea> */}
+              <textarea
+                {...register("message")}
+                placeholder={t("Contact.messagePlaceholder")}
+                className="input-field h-[100px] md:h-[120px]"
+                required
               ></textarea>
             </div>
             <div className="ml-auto">
