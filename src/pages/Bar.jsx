@@ -51,42 +51,6 @@ const Bar = () => {
       );
   };
 
-  // handleSubmit = (data) => {
-  //   console.log(data);
-  // };
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-
-  //   const templateParams = {
-  //     phone,
-  //     email,
-  //     message,
-  //   };
-
-  //   console.log("Sending email with the following data:", templateParams);
-
-  //   emailjs
-  //     .send(
-  //       "service_8hutyql",
-  //       "template_ar46vjr",
-  //       templateParams,
-  //       "UZ16V7aOepQVpGrq9"
-  //     )
-  //     .then(
-  //       (response) => {
-  //         console.log("SUCCESS!", response.status, response.text);
-  //         setSuccess(true);
-  //         setPhone("");
-  //         setEmail("");
-  //         setMessage("");
-  //       },
-  //       (err) => {
-  //         console.error("FAILED...", err);
-  //         setError("Failed to send message. Please try again.");
-  //       }
-  //     );
-  // };
   useEffect(() => {
     if (success || error) {
       const timer = setTimeout(() => {
@@ -127,19 +91,11 @@ const Bar = () => {
         <div>
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="ml-auto md:mx-auto flex flex-col gap-5"
+            className="ml-auto md:mx-auto flex flex-col gap-5 relative"
           >
             <div className="input-spacing">
               <label htmlFor="phone">{t("Contact.Tel")}</label>
-              {/* <input
-                type="number"
-                id="phone"
-                name="phone"
-                value={phone}
-                placeholder={t("Contact.telPlaceholder")}
-                className="input-field"
-                onChange={(e) => setPhone(e.target.value)}
-              /> */}
+
               <input
                 {...register("phone")}
                 className="input-field"
@@ -200,7 +156,7 @@ const Bar = () => {
               />
             </div>
             {success && (
-              <p className="text-green-600 text-center">
+              <p className="text-green-600 text-center absolute bottom-[-2rem]">
                 Message sent successfully!
               </p>
             )}
