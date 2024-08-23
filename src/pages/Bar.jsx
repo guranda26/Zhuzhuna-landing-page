@@ -6,6 +6,8 @@ import emailjs from "emailjs-com";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { data } from "autoprefixer";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { schema } from "../hooks/schema";
 
 const Bar = () => {
   const {
@@ -13,7 +15,9 @@ const Bar = () => {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm();
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
   const { t } = useTranslation();
 
   const [phone, setPhone] = useState("");
@@ -103,20 +107,11 @@ const Bar = () => {
                 required
               />
               {errors.phone && (
-                <p className="text-red-500">Phone is required</p>
+                <p className="text-red-500">{errors.phone.message}</p>
               )}
             </div>
             <div className="input-spacing">
               <label htmlFor="email">{t("Contact.Email")}</label>
-              {/* <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder={t("Contact.emailPlaceholder")}
-                className="input-field"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              /> */}
               <input
                 {...register("email")}
                 className="input-field"
@@ -124,19 +119,11 @@ const Bar = () => {
                 placeholder={t("Contact.emailPlaceholder")}
               />
               {errors.email && (
-                <p className="text-red-500">Email is required</p>
+                <p className="text-red-500">{errors.email.message}</p>
               )}
             </div>
             <div className="input-spacing">
               <label htmlFor="message">{t("Contact.Message")}</label>
-              {/* <textarea
-                name="message"
-                id="message"
-                placeholder={t("Contact.messagePlaceholder")}
-                className="input-field h-[100px] md:h-[120px]"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-              ></textarea> */}
               <textarea
                 {...register("message")}
                 placeholder={t("Contact.messagePlaceholder")}
@@ -144,7 +131,7 @@ const Bar = () => {
                 required
               ></textarea>
               {errors.message && (
-                <p className="text-red-500">Message is required</p>
+                <p className="text-red-500">{errors.message.message}</p>
               )}
             </div>
             <div className="ml-auto">
