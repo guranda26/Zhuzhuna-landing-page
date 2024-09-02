@@ -5,24 +5,24 @@ import { useTranslation } from "react-i18next";
 const MenuItems = ({ isMenuOpen }) => {
   const { t } = useTranslation();
 
-  // Define an array of menu items for easier management and mapping
   const menuItems = [
-    { sectionId: "about-us", title: t("About.Title") },
-    { sectionId: "news", title: t("News.Title") },
-    { sectionId: "wines", title: t("Bottle.Title") },
-    { sectionId: "cocktails", title: t("Cocktail.Title") },
-    { sectionId: "bar", title: t("Bar.Title") },
-    { sectionId: "footer", title: t("Contact.Title") },
+    { sectionId: "about-us", text: t("About.Title"), duration: 600 },
+    { sectionId: "news", text: t("News.Title"), duration: 1000 },
+    { sectionId: "cocktails", text: t("Cocktail.Title"), duration: 1300 },
+    { sectionId: "wines", text: t("Bottle.Title"), duration: 1700 },
+    { sectionId: "bar", text: t("Bar.Title"), duration: 2000 },
+    { sectionId: "contact", text: t("Contact.Title"), duration: 2500 },
   ];
 
   return (
     <>
-      {menuItems.map((item) => (
+      {menuItems.map(({ sectionId, text, duration }) => (
         <MenuItem
-          key={item.sectionId}
-          sectionId={item.sectionId}
-          text={item.title}
+          key={sectionId}
+          sectionId={sectionId}
+          text={text}
           isMenuOpen={isMenuOpen}
+          duration={duration}
         />
       ))}
     </>

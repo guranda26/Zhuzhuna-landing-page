@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-scroll";
 
-const MenuItem = ({ sectionId, text, isMenuOpen }) => {
+const MenuItem = ({ sectionId, text, isMenuOpen, duration }) => {
   return (
     <div
       className={`md:block ${
@@ -11,7 +11,7 @@ const MenuItem = ({ sectionId, text, isMenuOpen }) => {
       <Link
         to={sectionId}
         smooth={true}
-        duration={500}
+        duration={duration}
         className="relative z-10 px-2 py-3 transition-all duration-300 ease-in-out group-hover:bg-backgroundColor-purpleStart group-hover:rounded-full"
       >
         {text}
