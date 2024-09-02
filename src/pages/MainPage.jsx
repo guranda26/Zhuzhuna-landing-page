@@ -10,86 +10,6 @@ import Bar from "./Bar";
 const MainPage = () => {
   return (
     <div>
-      {/* Navigation Links */}
-      <nav>
-        <ul className="flex space-x-4">
-          <li>
-            <Link
-              to="home"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer"
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="about-us"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer"
-            >
-              About Us
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="news"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer"
-            >
-              News
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="cocktails"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer"
-            >
-              Cocktails
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="wines"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer"
-            >
-              Wines
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="bar"
-              smooth={true}
-              duration={5000}
-              className="cursor-pointer"
-            >
-              Bar
-            </Link>
-          </li>
-          <li>
-            <Link
-              activeClass="active"
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={10000}
-              className="cursor-pointer"
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
-
-      {/* Content Sections */}
       <Element name="home" className="element">
         <Home />
       </Element>
@@ -108,9 +28,7 @@ const MainPage = () => {
       <Element name="bar" className="element">
         <Bar />
       </Element>
-      <Element name="contact" className="element">
-        {/* Add contact content here */}
-      </Element>
+      <Element name="contact" className="element"></Element>
     </div>
   );
 };
