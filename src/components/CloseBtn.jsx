@@ -4,7 +4,7 @@ import { IoCloseSharp } from "react-icons/io5";
 const CloseBtn = () => {
   return (
     <div>
-      <IoCloseSharp className="hover:bg-red-600 size-[20px] bg-color-secondary" />
+      <IoCloseSharp className="hover:bg-red-700 size-[20px] bg-color-secondary" />
     </div>
   );
 };
