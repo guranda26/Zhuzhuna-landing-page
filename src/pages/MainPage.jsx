@@ -5,7 +5,7 @@ import AboutUs from "./AboutUs";
 import Cocktails from "./Cocktails";
 import News from "./News";
 import Wines from "./Wines";
-import Bar from "./Bar";
+import Bar from "./Contact";
 
 const MainPage = () => {
   return (
