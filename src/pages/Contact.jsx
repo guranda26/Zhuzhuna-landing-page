@@ -65,7 +65,7 @@ const Contact = () => {
     <section id="contact">
       <Background
         src="/images/banner1.png"
-        className="min-h-screen text-color-primary flex gap-5 pb-5 max-sm:px-[15px] justify-evenly lg:items-center items-start pt-[40px]"
+        className="min-h-screen text-color-primary flex gap-5 pb-5 max-w-sm:px-[15px] justify-evenly lg:items-center items-start pt-[40px] flex-wrap-reverse max-w-md:flex-col"
       >
         <div>
           <form
