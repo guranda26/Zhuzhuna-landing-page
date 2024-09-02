@@ -1,39 +1,32 @@
+import React from "react";
+import { Element } from "react-scroll";
 import Home from "./Home";
 import AboutUs from "./AboutUs";
 import Cocktails from "./Cocktails";
 import News from "./News";
 import Wines from "./Wines";
-import { Link, Element } from "react-scroll";
 import Bar from "./Bar";
 
 const MainPage = () => {
   return (
     <div>
       <Home />
-      <nav>
-        <Link to="about-us" smooth={true} duration={500}></Link>
-        <Link to="news" smooth={true} duration={500}></Link>
-        <Link to="cocktail" smooth={true} duration={500}></Link>
-        <Link to="wines" smooth={true} duration={500}></Link>
-        <Link to="bar" smooth={true} duration={500}></Link>
-        <Link to="contact" smooth={true} duration={500}></Link>
-      </nav>
-
-      <Element name="about-us">
+      <Element name="about-us" className="element">
         <AboutUs />
       </Element>
-      <Element name="news">
+      <Element name="news" className="element">
         <News />
       </Element>
-      <Element name="wines">
-        <Wines />
-      </Element>
-      <Element name="cocktails">
+      <Element name="cocktails" className="element">
         <Cocktails />
       </Element>
-      <Element name="bar">
+      <Element name="wines" className="element">
+        <Wines />
+      </Element>
+      <Element name="bar" className="element">
         <Bar />
       </Element>
+      <Element name="contact" className="element"></Element>
     </div>
   );
 };

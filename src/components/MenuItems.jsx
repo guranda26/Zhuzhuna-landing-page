@@ -4,34 +4,27 @@ import { useTranslation } from "react-i18next";
 
 const MenuItems = ({ isMenuOpen }) => {
   const { t } = useTranslation();
+
+  // Define an array of menu items for easier management and mapping
+  const menuItems = [
+    { sectionId: "about-us", title: t("About.Title") },
+    { sectionId: "news", title: t("News.Title") },
+    { sectionId: "wines", title: t("Bottle.Title") },
+    { sectionId: "cocktails", title: t("Cocktail.Title") },
+    { sectionId: "bar", title: t("Bar.Title") },
+    { sectionId: "footer", title: t("Contact.Title") },
+  ];
+
   return (
     <>
-      <MenuItem
-        sectionId="about-us"
-        text={t("About.Title")}
-        isMenuOpen={isMenuOpen}
-      />
-      <MenuItem
-        sectionId="news"
-        text={t("News.Title")}
-        isMenuOpen={isMenuOpen}
-      />
-      <MenuItem
-        sectionId="wines"
-        text={t("Bottle.Title")}
-        isMenuOpen={isMenuOpen}
-      />
-      <MenuItem
-        sectionId="cocktails"
-        text={t("Cocktail.Title")}
-        isMenuOpen={isMenuOpen}
-      />
-      <MenuItem sectionId="bar" text={t("Bar.Title")} isMenuOpen={isMenuOpen} />
-      <MenuItem
-        sectionId="footer"
-        text={t("Contact.Title")}
-        isMenuOpen={isMenuOpen}
-      />
+      {menuItems.map((item) => (
+        <MenuItem
+          key={item.sectionId}
+          sectionId={item.sectionId}
+          text={item.title}
+          isMenuOpen={isMenuOpen}
+        />
+      ))}
     </>
   );
 };

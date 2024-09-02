@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply scroll-smooth;
+  }
+}
+
 .input-field {
   @apply rounded-md bg-inputColor-dark-secondary w-[200px] md:w-[300px] py-3 text-[10px] px-3;
 }
