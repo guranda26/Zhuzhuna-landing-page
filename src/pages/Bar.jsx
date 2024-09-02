@@ -20,9 +20,6 @@ const Bar = () => {
   });
   const { t } = useTranslation();
 
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(null);
 

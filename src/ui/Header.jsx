@@ -27,7 +27,7 @@ const Header = () => {
           </Link>
         )}
         <div className="flex flex-2 md:flex-1 items-center gap-4">
-          <ul className="text-white flex flex-col md:flex-row md:space-y-0 space-x-4 md:space-x-2 justify-center flex-1">
+          <ul className="text-white flex flex-col md:flex-row md:space-y-0 space-x-4 md:space-x-2 justify-center flex-1 max-md:mt-5">
             <li
               className="block md:hidden cursor-pointer font-tommaso text-xl"
               onClick={toggleMenu}
