@@ -6,7 +6,11 @@ const MenuItems = ({ isMenuOpen }) => {
   const { t } = useTranslation();
 
   const menuItems = [
-    { sectionId: "about-us", text: t("About.Title"), duration: 600 },
+    {
+      sectionId: "about-us",
+      text: t("About.Title"),
+      duration: 600,
+    },
     { sectionId: "news", text: t("News.Title"), duration: 1000 },
     { sectionId: "cocktails", text: t("Cocktail.Title"), duration: 1300 },
     { sectionId: "wines", text: t("Bottle.Title"), duration: 1700 },

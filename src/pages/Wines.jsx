@@ -10,9 +10,13 @@ const Wines = () => {
 
   return (
     <Sections id="wines" title={t("Bottle.Title")}>
-      <div className="relative flex center md:justify-between h-auto border-2 border-buttonColor-primary">
-        <div className="max-w-[50%] lg:w-auto px-3 py-5 md:p-0 z-20">
-          <img src="../../images/bottle1.png" alt="bottle" />
+      <div className="relative flex max-xs:flex-col-reverse items-center md:justify-between h-auto border-2 border-buttonColor-primary">
+        <div className="sm:max-w-[50%] lg:w-auto px-3 py-5 md:p-0 z-20 w-[100%]">
+          <img
+            src="../../images/bottle1.png"
+            alt="bottle"
+            className="max-xs:w-[100%]"
+          />
           <p className={`md:hidden ${isDarkMode && "text-color-primary"}`}>
             {t("Bottle.Paragraph")}
           </p>

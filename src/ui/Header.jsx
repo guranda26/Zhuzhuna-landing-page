@@ -20,16 +20,16 @@ const Header = () => {
 
   return (
     <header className="bg-backgroundColor-dark-backgroundCol py-[10px]">
-      <div className="px-[50px] flex justify-between items-center">
+      <div className="px-[50px] max-xs:px-[30px] flex justify-between items-center">
         {!isMenuOpen && (
           <Link to={"/"}>
             <Logo />
           </Link>
         )}
-        <div className="flex flex-2 md:flex-1 items-center gap-4">
-          <ul className="text-white flex flex-col md:flex-row md:space-y-0 space-x-4 md:space-x-2 justify-center flex-1">
+        <div className="flex flex-2 md:flex-1 md:items-center gap-4 max-xs:gap-2">
+          <ul className="text-white flex flex-col md:items-center md:flex-row md:space-y-0 space-x-4 md:space-x-1 justify-center flex-1">
             <li
-              className="block md:hidden cursor-pointer font-tommaso text-md md:text-lg"
+              className="block md:hidden cursor-pointer font-tommaso text-md"
               onClick={toggleMenu}
             >
               {isMenuOpen ? <CloseBtn /> : `${t("Menu")}`}

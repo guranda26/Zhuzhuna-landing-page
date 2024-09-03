@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 const Background = ({ src, className = "", children }) => {
   return (
     <div
-      className={`${className} bg-cover bg-top md:bg-right-top w-screen px-[50px]`}
+      className={`${className} bg-cover bg-top md:bg-right-top w-screen px-[50px] max-xs:px-[20px]`}
       style={{ backgroundImage: `url(${src})` }}
     >
       {children}

@@ -20,7 +20,9 @@ const Card = ({
         className={`bg-backgroundColor-purpleMid max-w-[413px] rounded rounded-t-none text-color-primary p-4 flex flex-col space-y-5 ${className}`}
       >
         <span className="text-sm">{date}</span>
-        <h3 className="text-2xl">{title}</h3>
+        <h3 className="text-2xl" max-xs:text-xl>
+          {title}
+        </h3>
         <p>{description}</p>
         <div className="flex justify-end">
           <Button

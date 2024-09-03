@@ -78,6 +78,14 @@ export default {
         "disproportionate-arch": "0 0 50% 50%",
       },
     },
+    screens: {
+      xs: "378px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
   },
   plugins: [],
 };

@@ -2,7 +2,11 @@ import PropTypes from "prop-types";
 
 const Heading = ({ text, className = "" }) => {
   return (
-    <h2 className={`text-5xl font-tommaso pt-[40px] ${className}`}>{text}</h2>
+    <h2
+      className={`text-5xl max-xs:text-4xl font-tommaso pt-[40px] ${className}`}
+    >
+      {text}
+    </h2>
   );
 };
 Heading.propTypes = {

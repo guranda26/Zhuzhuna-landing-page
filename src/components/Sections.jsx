@@ -11,7 +11,7 @@ const Sections = ({ title, id, children, className = "" }) => {
           isDarkMode
             ? "bg-backgroundColor-purpleEnd"
             : "bg-backgroundColor-backgroundCol"
-        } md:px-[50px] ${className}`}
+        } md:px-[50px] max-xs:px-[30px] ${className}`}
       >
         <Heading
           text={title}

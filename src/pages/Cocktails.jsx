@@ -10,11 +10,15 @@ const Cocktails = () => {
     {
       title: t("Cocktails.AperolSpritz"),
       tableData: {
-        headers: [t("CocktailInfo.Aperol"), t("CocktailInfo.Orange")],
+        headers: [t("CocktailInfo.Aperol")],
         rows: [
-          [t("CocktailInfo.AperolVol.0"), t("CocktailInfo.Slice")],
-          [t("CocktailInfo.Ice"), t("CocktailInfo.Tonic")],
-          [t("CocktailInfo.FullGlass"), t("CocktailInfo.AperolVol.1")],
+          [t("CocktailInfo.AperolVol.0")],
+          [t("CocktailInfo.Orange")],
+          [t("CocktailInfo.Slice")],
+          [t("CocktailInfo.Tonic")],
+          [t("CocktailInfo.AperolVol.1")],
+          [t("CocktailInfo.Ice")],
+          [t("CocktailInfo.FullGlass")],
           [t("CocktailInfo.Zhuzhuna")],
           [t("CocktailInfo.AperolVol.2")],
         ],
@@ -49,11 +53,12 @@ const Cocktails = () => {
       },
     },
   ];
+
   return (
     <Sections id="cocktails" title={t("Cocktails.Title")}>
       <div className="relative bg-backgroundColor-dark-backgroundCol flex md:gap-[180px] items-center max-w-[100%]">
         <img
-          className="sm:bg-cover bg-top md:min-h-0 min-h-screen"
+          className="sm:bg-cover bg-top min-h-screen max-xs:min-h-[300px]"
           src="../../images/cocktail1.png"
           alt="cocktail-image"
         />
